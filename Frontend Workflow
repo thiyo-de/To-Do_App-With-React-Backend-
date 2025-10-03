@@ -1,0 +1,95 @@
+Got it 👍 you don’t want the code yet — you want the **workflow in steps** (like a roadmap: “this is next, then this”).
+Here’s the **Frontend Development Flow** for your project:
+
+---
+
+## ⚡ Step-by-Step Workflow (No Code)
+
+### **Step 1 – Setup Project**
+
+* Create a React project (Vite or CRA).
+* Install required packages (`axios`, `react-router-dom`, `tailwind` if needed).
+
+---
+
+### **Step 2 – Structure Your Project**
+
+* Make folders:
+
+  * `pages/` → Login, Register, Dashboard
+  * `components/` → Navbar, TodoItem
+  * `api/` → Axios setup
+  * `context/` → Auth context (to manage login state)
+
+---
+
+### **Step 3 – Setup Routing**
+
+* Use `react-router-dom` to create routes for:
+
+  * `/login`
+  * `/register`
+  * `/dashboard`
+
+---
+
+### **Step 4 – Axios Setup**
+
+* Create a single axios instance with your backend URL.
+* So you don’t repeat the full backend URL for every request.
+
+---
+
+### **Step 5 – Authentication Flow**
+
+* **Register page** → send form data to backend `/auth/register`.
+* **Login page** → send form data to `/auth/login` and save JWT token in `localStorage`.
+* After login, redirect to `/dashboard`.
+
+---
+
+### **Step 6 – Auth Context**
+
+* Create a global context to hold user info and token.
+* Functions inside: `login()`, `logout()`.
+* This makes token available across the whole app.
+
+---
+
+### **Step 7 – Protect Routes**
+
+* Create a Protected Route wrapper.
+* If no token → redirect user to `/login`.
+* If token → allow user to access `/dashboard`.
+
+---
+
+### **Step 8 – Dashboard (Todo Management)**
+
+* Fetch todos (`GET /todo`) when dashboard loads.
+* Add new todo (`POST /todo`).
+* Update a todo (`PUT /todo/:id`).
+* Delete a todo (`DELETE /todo/:id`).
+
+---
+
+### **Step 9 – UI/UX**
+
+* Add simple forms with validation.
+* Display error/success messages.
+* Use Tailwind or Material-UI for design.
+
+---
+
+### **Step 10 – Testing**
+
+* Test **Register** → User created.
+* Test **Login** → Token saved.
+* Test **Dashboard** → Todos working.
+* Test **Logout** → User redirected to login.
+
+---
+
+👉 This way, you’ll move step by step: **Setup → Routing → Axios → Auth → Dashboard → UI → Testing**.
+
+Do you want me to **guide you in real order** (like "okay, Step 1: setup project, now do it") and then you update me after each step?
